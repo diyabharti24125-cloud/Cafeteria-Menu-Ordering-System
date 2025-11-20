@@ -52,7 +52,7 @@ All orders are stored in a MySQL database for daily sales tracking.
 
 ## 📋 How to Run the Project
 
-### Step 1: Install Prerequisites
+   Step 1: Install Prerequisites
 ```bash
 pip install mysql-connector-python
 
