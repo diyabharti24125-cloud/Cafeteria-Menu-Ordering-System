@@ -51,19 +51,12 @@ All orders are stored in a MySQL database for daily sales tracking.
 ---
 
 ## 📋 How to Run the Project
-
-   Step 1: Install Prerequisites
-```bash
+Step 1: Install Prerequisites
 pip install mysql-connector-python
 
-   Step 2: Setup MySQL Database
-
+Step 2: Setup MySQL Database
 1. Start XAMPP → Run MySQL
-
-
 2. Open phpMyAdmin → Create database cafeteria_db
-
-
 3. Run this SQL:
 
 CREATE TABLE menu(
@@ -93,9 +86,7 @@ INSERT INTO menu (item_name, category, price) VALUES
 
 
 Step 3: Run the Application
-
 In VS Code terminal:
-
 python main.py
 
 
@@ -103,12 +94,9 @@ python main.py
 
 1. GUI showing menu items
 
-
 2. Items added to order with total bill
 
-
 3. Order confirmation message
-
 
 4. Data stored in MySQL (orders table)
 
