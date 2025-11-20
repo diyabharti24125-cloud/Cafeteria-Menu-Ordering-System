@@ -55,3 +55,73 @@ All orders are stored in a MySQL database for daily sales tracking.
 ### Step 1: Install Prerequisites
 ```bash
 pip install mysql-connector-python
+
+   Step 2: Setup MySQL Database
+
+1. Start XAMPP → Run MySQL
+
+
+2. Open phpMyAdmin → Create database cafeteria_db
+
+
+3. Run this SQL:
+
+CREATE TABLE menu(
+  item_id INT AUTO_INCREMENT PRIMARY KEY,
+  item_name VARCHAR(100),
+  category VARCHAR(50),
+  price DECIMAL(8,2)
+);
+
+CREATE TABLE orders(
+  order_id INT AUTO_INCREMENT PRIMARY KEY,
+  item_name VARCHAR(100),
+  quantity INT,
+  total_price DECIMAL(10,2),
+  order_date DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+4. Insert sample data into menu:
+
+INSERT INTO menu (item_name, category, price) VALUES
+('Tea', 'Beverages', 15.00),
+('Cold Coffee', 'Beverages', 40.00),
+('Veg Burger', 'Snacks', 55.00),
+('Paneer Sandwich', 'Snacks', 45.00),
+('Brownie', 'Dessert', 70.00);
+
+
+Step 3: Run the Application
+
+In VS Code terminal:
+
+python main.py
+
+
+🪄 Output Preview
+
+1. GUI showing menu items
+
+
+2. Items added to order with total bill
+
+
+3. Order confirmation message
+
+
+4. Data stored in MySQL (orders table)
+
+
+
+📊 Future Enhancements
+
+Add item removal before checkout
+
+Add admin login panel
+
+Generate daily sales reports
+
+Export data to CSV or PDF
+
+
